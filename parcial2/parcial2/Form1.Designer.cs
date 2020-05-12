@@ -31,9 +31,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtConsulta = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblBeneficiario = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -64,33 +64,34 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "CONSULTAR";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // txtConsulta
             // 
-            this.textBox1.Location = new System.Drawing.Point(237, 203);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(335, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtConsulta.Location = new System.Drawing.Point(237, 203);
+            this.txtConsulta.Name = "txtConsulta";
+            this.txtConsulta.Size = new System.Drawing.Size(335, 20);
+            this.txtConsulta.TabIndex = 3;
             // 
-            // label2
+            // lblNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 372);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "NOMBRE DE LA PERSONA";
-            this.label2.Visible = false;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(51, 372);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(143, 13);
+            this.lblNombre.TabIndex = 4;
+            this.lblNombre.Text = "NOMBRE DE LA PERSONA";
+            this.lblNombre.Visible = false;
             // 
-            // label3
+            // lblBeneficiario
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(234, 372);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "ERES BENEFICIARIO DE LOS $300";
-            this.label3.Visible = false;
+            this.lblBeneficiario.AutoSize = true;
+            this.lblBeneficiario.Location = new System.Drawing.Point(234, 372);
+            this.lblBeneficiario.Name = "lblBeneficiario";
+            this.lblBeneficiario.Size = new System.Drawing.Size(182, 13);
+            this.lblBeneficiario.TabIndex = 5;
+            this.lblBeneficiario.Text = "ERES BENEFICIARIO DE LOS $300";
+            this.lblBeneficiario.Visible = false;
             // 
             // Form1
             // 
@@ -98,9 +99,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblBeneficiario);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.txtConsulta);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -116,9 +117,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtConsulta;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblBeneficiario;
     }
 }
 

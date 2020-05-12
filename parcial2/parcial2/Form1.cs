@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using parcial2.MODEL;
 
 namespace parcial2
 {
@@ -22,6 +23,39 @@ namespace parcial2
         {
             frmLoguin log = new frmLoguin();
             log.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (gobEntities db = new gobEntities())
+            {
+                var lista = from usuario in db.usuarios
+                            where usuario.dui == txtConsulta.Text
+                            select usuario;
+
+                if (lista.Count() > 0)
+                {
+                    var nombre = from usuario in db.usuarios
+                                 where usuario.dui == txtConsulta.Text
+                                 select new
+                                 {
+                                     Nombre = usuario.nombre.ToString()
+                                 };
+                    foreach (var iterarnomnbre in nombre)
+                    {
+                        lblNombre.Text = iterarnomnbre.Nombre.ToString();
+
+                        lblNombre.Visible = true;
+                        lblBeneficiario.Visible = true;
+                    }
+                }
+                else
+                {
+                    lblNombre.Text = "NO ERES BENEFICIARIO";
+                    lblNombre.Visible = true;
+                    lblBeneficiario.Visible = false;
+                }
+            }
         }
     }
 }
